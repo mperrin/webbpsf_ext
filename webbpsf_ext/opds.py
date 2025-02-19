@@ -17,7 +17,7 @@ import astropy.units as u
 # WebbPSF
 import stpsf as webbpsf
 from webbpsf.opds import OTE_Linear_Model_WSS
-from webbpsf.utils import get_webbpsf_data_path
+from webbpsf.utils import get_stpsf_data_path as get_webbpsf_data_path
 
 # Logging
 from . import conf

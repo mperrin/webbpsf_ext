@@ -47,7 +47,7 @@ from .utils import check_fitsgz, webbpsf, poppy
 from webbpsf import MIRI as webbpsf_MIRI
 from webbpsf import NIRCam as webbpsf_NIRCam
 from webbpsf.opds import OTE_Linear_Model_WSS
-
+from webbpsf.utils import get_stpsf_data_path as get_webbpsf_data_path
 # Program bar
 from tqdm.auto import trange, tqdm
 
@@ -2254,7 +2254,7 @@ def _get_opd_info(self, opd=None, pupil=None, HDUL_to_OTELM=True):
         #header['WFEDRIFT'] = (self.wfe_drift, "WFE drift amount [nm]")
 
         if isinstance(pupil, six.string_types) and (not os.path.exists(pupil)):
-            wdir = webbpsf.utils.get_webbpsf_data_path()
+            wdir = get_webbpsf_data_path()
             pupil = os.path.join(wdir, pupil)
 
         if isinstance(pupil, six.string_types):

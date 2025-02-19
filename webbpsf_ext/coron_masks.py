@@ -98,6 +98,7 @@ def coron_trans(name, module='A', pixelscale=None, npix=None, oversample=1,
     Returns the intensity transmission (square of the amplitude transmission). 
     """
 
+    import stpsf as webbpsf
     from webbpsf.optics import NIRCam_BandLimitedCoron
 
     shifts = {'shift_x': shift_x, 'shift_y': shift_y}

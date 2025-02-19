@@ -61,7 +61,7 @@ def check_fitsgz(opd_file, inst_str=None):
         string to determine if to look in instrument OPD directory,
         otherwise assume file name is in webbpsf data base directory.
     """
-    from webbpsf.utils import get_webbpsf_data_path
+    from webbpsf.utils import get_stpsf_data_path as get_webbpsf_data_path
 
     # Check if instrument name is in OPD file name
     # If so, then this is in instrument OPD directory
